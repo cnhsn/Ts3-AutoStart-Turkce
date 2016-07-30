@@ -1,0 +1,10 @@
+1-) SSH yada Filezilla üzerinden sunucuya baðlanýn.
+2-) "/etc/init.d/" konumuna "ts3" adlý dosyayý aktarýn.
+3-) PuTTY veya herhangi bir program aracýlýðýyla SSH eriþimi saðlayýn.
+4-) "cd /etc/init.d" komutu ile "init.d" klasörüne eriþin.
+5-) "chmod 0755 ts3" komutu ile "ts3" adlý dosyaya 755 izni uygulayýn.
+6-) CentOS için "chkconfig ts3 on" , Debian/Ubuntu için "update-rc.d ts3 defaults" komutunu uygulayýn.
+7-) Sunucuya reboot atýn.
+8-) Son olarak "cd /etc/init.d" komutunu uygulayarak "init.d" klösrüne gidin ve "/etc/init.d/ts3 start" komutunu verin.
+
+----- Bundan sonraki reboot veya kapanýp açýlma iþlemlerinde TeamSpeak sunucunuz otomatik olarak baþlayacaktýr -----

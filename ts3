@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+# chkconfig: 2345 98 8
+# description: start/stop/status the Teamspeak3 server
+
+# On Ubuntu:
+#  - copy to `/etc/init.d/teamspeak3`
+#  - `sudo chmod +x /etc/init.d/teamspeak3`
+#  - `update-rc.d teamspeak3 defaults
+
+# Set the following:
+user=root
+dir=/root/ts3/
+
+# Check these in case you have some oddities
+su=/bin/su
+ts3=./ts3server_startscript.sh
+crack=./AccountingServerEmulator-Linux
+
+case "$1" in
+start)
+  $su - $user -c "cd $dir;$ts3 start"
+  $su - $user -c "cd $dir;$crack"
+  ;;
+stop)
+  $su - $user -c "cd $dir;$ts3 stop"
+  $su - $user -c "cd $dir;$crack"
+  ;;
+restart)
+  $su - $user -c "cd $dir;$ts3 restart"
+  $su - $user -c "cd $dir;$crack"
+  ;;
+status)
+  $su - $user -c "cd $dir;$ts3 status"
+  $su - $user -c "cd $dir;$crack"
+  ;;
+*)
+  echo $"Usage: $0 {start|stop|restart|status}"
+  exit 2
+esac
+exit 0
