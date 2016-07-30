@@ -1,18 +1,13 @@
 #!/bin/bash
 #
 # chkconfig: 2345 98 8
-# description: start/stop/status the Teamspeak3 server
+# description: Teamspeak 3 sunuculari icin otomatik baslatici
 
-# On Ubuntu:
-#  - copy to `/etc/init.d/teamspeak3`
-#  - `sudo chmod +x /etc/init.d/teamspeak3`
-#  - `update-rc.d teamspeak3 defaults
-
-# Set the following:
+# User kismina dokunmayiniz. "dir" kismini kendi sunucu klasorunuze gore duzenleyiniz:
 user=root
 dir=/root/ts3/
 
-# Check these in case you have some oddities
+# Degiskenleri duzenlemenizi tavsiye etmiyorum.
 su=/bin/su
 ts3=./ts3server_startscript.sh
 crack=./AccountingServerEmulator-Linux
