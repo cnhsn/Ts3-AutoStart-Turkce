@@ -10,3 +10,7 @@
 8. Son olarak "cd /etc/init.d" komutunu uygulayarak "init.d" klösrüne gidin ve "/etc/init.d/ts3 start" komutunu verin.
 
 ----- Bundan sonraki reboot veya kapanıp açılma işlemlerinde TeamSpeak sunucunuz otomatik olarak başlayacaktır -----
+
+## Credits
+
+Hasan CAN - https://hasan.im
