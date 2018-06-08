@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # chkconfig: 2345 98 8
-# description: Teamspeak 3 sunuculari icin otomatik baslatici
+# description: Teamspeak 3 sunuculari icin otomatik baslatici.
 
 # User kismina dokunmayiniz. "dir" kismini kendi sunucu klasorunuze gore duzenleyiniz:
 user=root
