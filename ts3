@@ -4,30 +4,25 @@
 # description: Teamspeak 3 sunuculari icin otomatik baslatici.
 
 # User kismina dokunmayiniz. "dir" kismini kendi sunucu klasorunuze gore duzenleyiniz:
-user=root
-dir=/root/ts3/
+user=teamspeak
+dir=/home/teamspeak/teamspeak3-server_linux_amd64/
 
 # Degiskenleri duzenlemenizi tavsiye etmiyorum.
 su=/bin/su
 ts3=./ts3server_startscript.sh
-crack=./AccountingServerEmulator-Linux
 
 case "$1" in
 start)
-  $su - $user -c "cd $dir;$ts3 start"
-  $su - $user -c "cd $dir;$crack"
+  $su - $user -c "cd $dir;$ts3 start license_accepted=1"
   ;;
 stop)
   $su - $user -c "cd $dir;$ts3 stop"
-  $su - $user -c "cd $dir;$crack"
   ;;
 restart)
-  $su - $user -c "cd $dir;$ts3 restart"
-  $su - $user -c "cd $dir;$crack"
+  $su - $user -c "cd $dir;$ts3 restart license_accepted=1"
   ;;
 status)
   $su - $user -c "cd $dir;$ts3 status"
-  $su - $user -c "cd $dir;$crack"
   ;;
 *)
   echo $"Usage: $0 {start|stop|restart|status}"
